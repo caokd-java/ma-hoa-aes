@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>AES</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Demo mã hoá chuỗi với AES</h1>
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <td>Chuỗi cần mã hoá</td>
+              <td>
+                <input class="form-control" type="text" name="str2Encrypt" id="str2Encrypt" onkeyup="onChangeValueMaHoa();">
+              </td>
+            </tr>
+            <tr>
+              <td>Mật khẩu mã hoá</td>
+              <td>
+                <input class="form-control" type="text" name="password2Encrypt" id="password2Encrypt" onkeyup="onChangeValueMaHoa();">
+              </td>
+            </tr>
+            <tr>
+              <td>Kết quả mã hoá</td>
+              <td>
+                <input class="form-control" type="text" name="resultEncrypt" id="resultEncrypt" value="" readonly>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="text-center">
+                <button class="btn btn-primary" disabled="true" id="btnMaHoa" onclick="encrypt();">Mã hoá</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Chuỗi cần giải mã</td>
+              <td>
+                <input class="form-control" type="text" name="str2Decrypt" id="str2Decrypt" onkeyup="onChangeValueGiaiMa();">
+              </td>
+            </tr>
+            <tr>
+              <td>Mật khẩu giải mã</td>
+              <td>
+                <input class="form-control" type="text" name="password2Decrypt" id="password2Decrypt" onkeyup="onChangeValueGiaiMa();">
+              </td>
+            </tr>
+            <tr>
+              <td>Kết quả giải mã</td>
+              <td>
+                <input class="form-control" type="text" name="resultDecrypt" id="resultDecrypt" value="" readonly>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="text-center">
+                <button class="btn btn-primary" id="btnGiaiMa" disabled="true" onclick="decrypt();">Giải mã</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.jss"></script>
+</html>
